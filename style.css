@@ -1,11 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,100;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Mulish:ital,wght@1,500&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
-
-
 *{
     margin: 0;
     pad: 0;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --font-primary: "Josefin Sans", serif;
+    --font-secundary:  "Dosis", serif;
+    --font-action: "Mulish", serif;
+}
+
+.hamburger{
+    /*background: red; */
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: all 1s;
+
+}
+.show-menu .hamburger{
+    right: 16rem;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #ffffff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+}
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line1{
+    transform: rotate(45deg) translate(.28rem, .45rem);
+}
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.17rem, -.45rem);
+}
+
+.hamburger span{
+    position: absolute;
+    left: 3rem;
+    background-color: rgba(0, 0, 75, .2);
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: var(--font-action);
+    opacity: 0;
+
+}
+
+.hamburger span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid rgba(0, 0, 75, .2) ;
+    border-top: .5rem solid transparent ;
+    border-bottom: .5rem solid transparent ;
+    border-left: .5rem solid transparent ;
+    left: -1rem;
+    }
+.show-menu .hamburger:hover span{
+    opacity: 1;
 }
 
 header{
@@ -52,7 +121,7 @@ header{
     animation: moveBanner 3s forwards;
 }
 .banner p{
-    font-family: "Dosis", serif;
+    font-family: var(--font-secundary);
     color: #ffffff;
     font-size: 2rem;
     text-shadow: .2rem .2rem rgba(0,0,0,.4);
@@ -62,7 +131,7 @@ header{
 }
 
 .banner button{
-    font-family: "Mulish", serif;
+    font-family: var(--font-action);
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -87,4 +156,60 @@ header{
     100%{
         transform: translateY(0rem) rotateY(0deg);
     }
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+.show-menu .sidebar{
+    right: 0;
+}
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: .5rem;
+}
+.menu-item{
+    text-align: center;
+}
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: rgb(129, 109, 247);
+}
+
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media i{
+    background-color: rgba(0, 0, 75, .2);
+    color: rgba(255, 255, 255, 0.5);
+    height:2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+.social-media i:hover{
+    background-color: rgba(0, 0, 100, .1);
 }
