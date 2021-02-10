@@ -1,12 +1,12 @@
-# portifolio
+# portfolio
 
 Portifolio do Desenvolvedor
 
-## Tarefas
+## Task
 
 O controle das tarefas desse projeto será atualizado no GitHub
 
-## Icones
+## Icon
 
 - :package: New Funcion
 - :up: Update
