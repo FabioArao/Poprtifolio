@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Mulish:ital,wght@1,500&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+*{
+    margin: 0;
+    pad: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-primary: "Josefin Sans", serif;
+    --font-secundary:  "Dosis", serif;
+    --font-action: "Mulish", serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100vw;
+}
+.img-wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(121, 121, 121, 0.678);
+}
+
+#bgImage{
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.2;
+    object-fit: cover;
+}
+
+
+.banner{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.banner h1{
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-family: "Josefin Sans", serif;
+    font-weight: 100;
+    text-shadow: .2rem .3rem 2px rgba(0,0,0,.4);
+    line-height: 3.5rem;
+    animation: moveBanner 3s forwards;
+}
+
+.banner h2{
+    position: relative;
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: var(--font-secundary), serif;
+    font-weight: bold;
+    text-shadow: .2rem .3rem 2px rgba(0,0,0,.3);
+    line-height: 3.5rem;
+    animation: moveBanner 3s forwards;
+    left: 30px;
+}
+
+.search-container{
+    float: right;
+    padding-bottom: 10px;
+    padding-right: 30px;
+
+}
+
+
+
+.nav-container{
+    z-index: 9999;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 100%;
+}
+
+#faceIcon{
+    padding-left: 15rem;
+    color: rgb(0,0, 160);
+}
+#instaIcon{
+color: rgb(237, 147, 38)
+}
+.top-menu{
+    padding-left: 15rem;
+        font-family: var(--font-secundary);
+        color:#000;
+        background-color: rgb(252, 248, 58);
+    }
+
+    .top-menu ul li {
+        position: relative;
+        color:#000;
+        align-items: right;
+        display: inline-block;
+        justify-content: right;
+        right: 20px;
+    }
+    .top-menu ul li a {
+        position: relative;
+        color:#000;
+        display: block;
+        padding: 13px 10px;
+        align-items: right;
+        justify-content: right;
+    }
+
+.card{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    table-layout: auto;
+}
+
+.card-wrapper{
+    width: 25%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 10px;
+}
+
+.card-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    }
+
+    .card-info{
+        position: absolute;
+        bottom: 0;
+        opacity: 50;
+        visibility: visible;
+        padding-left: 2rem;
+        text-shadow: 0.3 0.2rem 0.3rem rgba(0, 0, 0, .6);
+        transition: all .3s ;
+    }
+    .card-info h2{
+        font-family: var(--font-secundary);
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgba(63, 62, 85, 0.836);
+    }
+    
+    .card-info h3{
+        font-family: var(--font-action);
+        font-weight: bolder;
+        color: #ff4081;
+    }
+    
+    .card-info p{
+        font-family: var(--font-secundary);
+        color: rgb(56, 54, 71);
+        font-weight: bold;
+        width: 80%;
+        margin-bottom: 2rem;
+    
+    }
+
+
+
+  input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+  button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    input[type=text] {
+        margin-top: 6px;
+    font-size: 15px;
+    border: none;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+
+  
+  /* Style the submit button */
+    button {
+        margin-top: 5px;
+        float: right;
+    width: 20%;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  ::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
